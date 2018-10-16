@@ -1,0 +1,104 @@
+.pc {
+    @import "lds-patt-canvas";
+    @import "lds-nav-path";
+
+    @include data-list-navbar();
+
+    .navbar {
+        margin-top: -3em;
+        border-bottom: 0;
+    }
+
+    .navbar-right {
+        float: right !important;
+        margin-top: -5px;
+
+        @media (max-width: $screen-sm) {
+            // margin-top: -15px;
+        }
+    }
+
+    .data-list {
+        @include data-list-common();
+
+        @media (max-width: $screen-xs),
+               (min-width: $screen-xs-min) {
+            th.col-name,
+            td.col-name {
+                width: 150px;
+                max-width: 150px;
+            }
+
+            th.col-control,
+            td.col-control {
+                width: 30px;
+                max-width: 30px;
+            }
+
+            th.col-shared-by,
+            td.col-shared-by {
+                width: 80px;
+                max-width: 80px;
+            }
+        }
+
+        @media (min-width: $screen-xs-min) {
+            th.col-name,
+            td.col-name {
+                width: 250px;
+                max-width: 250px;
+            }
+
+            th.col-control,
+            td.col-control {
+                width: 120px;
+                max-width: 120px;
+            }
+        }
+
+        @media (min-width: $screen-sm-min) {
+            th.col-name,
+            td.col-name {
+                width: 300px;
+                max-width: 300px;
+            }
+
+            th.col-control,
+            td.col-control {
+                width: 120px;
+                max-width: 120px;
+            }
+        }
+
+        @media (min-width: $screen-md-min) {
+            th.col-name,
+            td.col-name {
+                width: 500px;
+                max-width: 500px;
+            }
+
+            th.col-control,
+            td.col-control {
+                width: 120px;
+                max-width: 120px;
+            }
+
+            th.col-shared-by,
+            td.col-shared-by {
+                width: 160px;
+                max-width: 160px;
+            }
+        }
+
+        td.col-tags {
+            span.label {
+                margin-right: 2px;
+            }
+        }
+
+        td.col-name {
+            position: relative;
+            padding-left: 1.2em;
+        }
+    }
+}

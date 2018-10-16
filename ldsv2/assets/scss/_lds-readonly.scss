@@ -1,0 +1,27 @@
+.readonly {
+    label {
+        position: absolute;
+        font-weight: normal;
+        background-color: #ffd975;
+        color: red;
+        padding: 2px 6px;
+        border-radius: 2px;
+        font-size: $font-size-small;
+        top: 33px;
+        right: 2px;
+
+        .fa-eye {
+            color: red;
+        }
+    }
+}
+
+.pc .readonly {
+    label {
+        top: 20px;
+        @media (max-width: $screen-sm) {
+            top: 7px;
+            right: 50px;
+        }
+    }
+}

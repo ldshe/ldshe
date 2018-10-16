@@ -1,0 +1,162 @@
+.dd {
+    h4 {
+        font-weight: bold;
+        border-bottom: solid 1px #000;
+    }
+
+    .chart-wrapper {
+        margin-left: -5px;
+        margin-right: -5px;
+
+        > [class*=col-] {
+            padding: 0;
+        }
+    }
+
+    .chart {
+        position: relative;
+        margin: 5px;
+        padding: 5px;
+        border: solid 1px #ddd;
+        border-radius: 2px;
+
+        .title {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .legend {
+            text {
+                font-size: $font-size-small;
+            }
+        }
+    }
+
+    .chart-canvas {
+        overflow: hidden;
+    }
+
+    .chart-tooltip {
+        position: absolute;
+        display: none;
+        padding: 5px;
+        background-color: #fff;
+        box-shadow: -3px 3px 15px #888888;
+        border-radius: 4px;
+        font-size: $font-size-small;
+        text-align: center;
+        width: auto;
+        max-width: 150px;
+        height: auto;
+        z-index: 1000;
+    }
+
+    .heading  {
+        background-color: #ddd;
+        font-weight: bold;
+    }
+
+    .activity {
+        display: table;
+        border-collapse: collapse;
+        width: 100%;
+
+        .activity-caption {
+            display: table-caption;
+        }
+
+        .activity-row {
+            display: table-row;
+            > div {
+                display: table-cell;
+                border: solid 1px #000;
+                padding: 2px 5px;
+                font-size: $font-size-small;
+
+                &.heading.time {
+                    width: 35%;
+                }
+            }
+        }
+    }
+
+    .timetable {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0.5em;
+        min-height: 300px;
+
+        .class-unit-panel, .learning-unit-panel {
+            flex: none;
+            width: 15%;
+            border: solid 1px #ddd;
+            border-radius: 4px;
+
+            .unit {
+                font-size: $font-size-small;
+                text-align: center;
+                color: #fff;
+                text-shadow: 1px 1px 1px #444;
+                padding: 0.5em 0;
+                cursor: default;
+            }
+        }
+
+        .class-timetable, .learning-timetable {
+            font-size: 10px;
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+            overflow-x: scroll;
+            border: solid 1px #ddd;
+            border-radius: 4px;
+            margin-left: 4px;
+
+            .time-slot {
+                margin: 0 2px;
+
+                .slot-title {
+                    text-align: center;
+                    width: 102px;
+                }
+
+                .duration {
+                    width: 102px;
+                    border: solid 1px #000;
+
+                    &:not(:first-child) {
+                        margin-top: -1px;
+                    }
+                }
+
+                .no-class {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: calc(100% - 30px);
+                    border: solid 1px #000;
+
+                    background-color: #ffe699;
+                    > div {
+                        font-size: 1.5em;
+                        font-weight: bold;
+                        text-align: center;
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+
+            &.empty {
+                display: flex;
+                flex: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 85%;
+                font-size: $font-size-base;
+            }
+        }
+    }
+}

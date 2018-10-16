@@ -1,0 +1,157 @@
+$dk-background-color: #ff5512;
+$dk-color: #ffe1e1;
+$ds-background-color: #4472c4;
+$ds-color: #d8d8fe;
+$gs-background-color: #48cb81;
+$gs-color: #d1f7e1;
+$opt-color: #555555;
+
+.cs .sortable-list.lo {
+
+    td .form-group {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @media (min-width: $screen-xs-min) {
+        th.col-type,
+        td.col-type {
+            min-width: 350px;
+            width: 520px;
+        }
+    }
+
+    @media (min-width: $screen-sm-min) {
+        th.col-type,
+        td.col-type {
+            min-width: 620px;
+            width: 620px;
+        }
+    }
+
+    @media (min-width: $screen-md-min) {
+        th.col-type,
+        td.col-type {
+            min-width: 640px;
+            width: 640px;
+        }
+
+        th.col-control,
+        td.col-control {
+            min-width: 140px;
+            width: 140px;
+        }
+    }
+}
+
+.cs form.lo {
+    select {
+        &.disciplinary-knowledge {
+            background-color: $dk-background-color;
+            color: $dk-color;
+        }
+
+        &.disciplinary-skills {
+            background-color: $ds-background-color;
+            color: $ds-color;
+        }
+
+        &.generic-skills {
+            background-color: $gs-background-color;
+            color: $gs-color;
+        }
+
+        option.disciplinary-knowledge {
+            background-color: white;
+            color: $opt-color;
+        }
+
+        option.disciplinary-skills {
+            background-color: white;
+            color: $opt-color;
+        }
+
+        option.generic-skills {
+            background-color: white;
+            color: $opt-color;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        @include box-sizing(border-box);
+        resize: vertical;
+    }
+
+    textarea[name=description] {
+        min-height: 5em;
+    }
+
+    small {
+        font-size: $font-size-small;
+    }
+}
+
+.label.label-dk {
+    background-color: $dk-background-color;
+    color: $dk-color;
+}
+
+.label.label-ds {
+    background-color: $ds-background-color;
+    color: $ds-color;
+}
+
+.label.label-gs {
+    background-color: $gs-background-color;
+    color: $gs-color;
+}
+
+
+.popover-lo {
+    .popover-title,
+    .popover-content {
+        font-size: $font-size-small;
+    }
+
+    .popover-title {
+        padding: 0;
+        font-weight: bold;
+        .dk, .ds, .gs {
+            padding: 8px 10px;
+            border-top-left-radius: 0.5em;
+            border-top-right-radius: 0.5em;
+        }
+        .dk {
+            background-color: $dk-background-color;
+            color: $dk-color;
+        }
+        .ds {
+            background-color: $ds-background-color;
+            color: $ds-color;
+        }
+        .gs {
+            background-color: $gs-background-color;
+            color: $gs-color;
+        }
+    }
+
+    .popover-content {
+        padding: 0;
+        .dk, .ds, .gs {
+            padding: 9px 10px;
+            border-bottom-left-radius: 0.5em;
+            border-bottom-right-radius: 0.5em;
+        }
+        .dk {
+            border: solid 1px $dk-background-color;
+        }
+        .ds {
+            border: solid 1px $ds-background-color;
+        }
+        .gs {
+            border: solid 1px $gs-background-color;
+        }
+    }
+}

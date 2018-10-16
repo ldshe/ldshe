@@ -1,0 +1,214 @@
+.ug {
+    @import "lds-nav-path";
+
+    .breadcrumb {
+        font-size: $font-size-h3;
+        margin-top: 10px;
+    }
+
+    .form-group {
+        .panel {
+            margin-bottom: 5px;
+        }
+        .panel-body {
+            padding: 5px;
+            font-size: $font-size-small;
+            min-height: 30px;
+        }
+        .btn-toolbar {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        textarea {
+            min-height: 10em;
+            resize: vertical;
+        }
+    }
+
+    .select2 {
+        width: 100%;
+        font-size: $font-size-small;
+    }
+
+    @include data-list-navbar();
+
+    &.group {
+        .navbar {
+            margin-top: -3em;
+            border-bottom: 0;
+        }
+    }
+
+    &.group .data-list {
+        @include data-list-common();
+
+        @media (max-width: $screen-xs),
+               (min-width: $screen-xs-min) {
+            th.col-name,
+            td.col-name {
+                width: 80px;
+                max-width: 80px;
+            }
+
+            th.col-owner,
+            td.col-owner {
+                width: 80px;
+                max-width: 80px;
+            }
+
+            th.col-size,
+            td.col-size {
+                width: 20px;
+                max-width: 20px;
+            }
+
+            th.col-control,
+            td.col-control {
+                width: 30px;
+                max-width: 30px;
+            }
+        }
+
+        @media (min-width: $screen-xs-min) {
+            th.col-control,
+            td.col-control {
+                width: 100px;
+                max-width: 100px;
+            }
+        }
+
+        @media (min-width: $screen-sm-min) {
+
+            th.col-name,
+            td.col-name {
+                width: 180px;
+                max-width: 180px;
+            }
+
+            th.col-owner,
+            td.col-owner {
+                width: 100px;
+                max-width: 100px;
+            }
+
+            th.col-size,
+            td.col-size {
+                width: 50px;
+                max-width: 50px;
+            }
+
+            th.col-control,
+            td.col-control {
+                width: 60px;
+                max-width: 60px;
+            }
+        }
+
+        @media (min-width: $screen-md-min) {
+            th.col-name,
+            td.col-name {
+                width: 280px;
+                max-width: 280px;
+            }
+
+            th.col-owner,
+            td.col-owner {
+                width: 180px;
+                max-width: 180px;
+            }
+
+            th.col-size,
+            td.col-size {
+                width: 50px;
+                max-width: 50px;
+            }
+
+            th.col-control,
+            td.col-control {
+                width: 60px;
+                max-width: 60px;
+            }
+        }
+    }
+
+    .settings.modal .group-title {
+        margin-bottom: 10px;
+    }
+
+    .management {
+        @media (min-width: $screen-sm) {
+            .navbar-form {
+                padding: 0;
+            }
+        }
+    }
+
+    .member .data-list {
+        @include data-list-common();
+
+        td span.label {
+            font-size: 90%;
+        }
+
+        @media (max-width: $screen-xs),
+               (min-width: $screen-xs-min) {
+            th.col-user,
+            td.col-user {
+                width: 80px;
+                max-width: 100px;
+            }
+
+            th.col-email,
+            td.col-email {
+                width: 80px;
+                max-width: 100px;
+            }
+
+            th.col-status,
+            td.col-status {
+                width: 80px;
+                max-width: 80px;
+            }
+
+            th.col-control,
+            td.col-control {
+                width: 30px;
+                max-width: 30px;
+            }
+        }
+
+        @media (min-width: $screen-xs-min) {
+            th.col-control,
+            td.col-control {
+                width: 100px;
+                max-width: 100px;
+            }
+        }
+
+        @media (min-width: $screen-sm-min) {
+            th.col-user,
+            td.col-user {
+                min-width: 100px;
+                width: 100px;
+            }
+
+            th.col-email,
+            td.col-email {
+                min-width: 120px;
+                width: 120px;
+            }
+
+            th.col-control,
+            td.col-control {
+                width: 60px;
+                max-width: 60px;
+            }
+        }
+    }
+
+    .member {
+        .fa-trash {
+            color: red;
+        }
+    }
+}

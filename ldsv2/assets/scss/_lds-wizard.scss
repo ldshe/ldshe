@@ -1,0 +1,124 @@
+$font-size: 20px;
+$font-em-size: 25px;
+$icon-length: 40px;
+$icon-em-length: 45px;
+$background-color: #fff;
+$active-color: #42669b;
+$activated-color: #3e87de;
+$unactivated-color: #ddd;
+$hover-color: #96afd4;
+
+@mixin progress-line-width($step-num, $step) {
+     width: (($step*2-1) / ($step-num*2) * 100)+%;
+}
+
+@mixin progress-unit-width($step-num) {
+     width: (100/$step-num)+%;
+}
+
+.wizard-steps {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.wizard-progress {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: $unactivated-color;
+}
+
+.wizard-progress-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    background: $activated-color;
+
+    &.step-1-1 {@include progress-line-width(1, 1);}
+    &.step-2-1 {@include progress-line-width(2, 1);}
+    &.step-2-2 {@include progress-line-width(2, 2);}
+    &.step-3-1 {@include progress-line-width(3, 1);}
+    &.step-3-2 {@include progress-line-width(3, 2);}
+    &.step-3-3 {@include progress-line-width(3, 3);}
+    &.step-4-1 {@include progress-line-width(4, 1);}
+    &.step-4-2 {@include progress-line-width(4, 2);}
+    &.step-4-3 {@include progress-line-width(4, 3);}
+    &.step-4-4 {@include progress-line-width(4, 4);}
+    &.step-5-1 {@include progress-line-width(5, 1);}
+    &.step-5-2 {@include progress-line-width(5, 2);}
+    &.step-5-3 {@include progress-line-width(5, 3);}
+    &.step-5-4 {@include progress-line-width(5, 4);}
+    &.step-5-5 {@include progress-line-width(5, 5);}
+}
+
+.wizard-step {
+    position: relative;
+    float: left;
+    padding: 0 5px;
+
+    &.step-1 {@include progress-unit-width(1);}
+    &.step-2 {@include progress-unit-width(2);}
+    &.step-3 {@include progress-unit-width(3);}
+    &.step-4 {@include progress-unit-width(4);}
+    &.step-5 {@include progress-unit-width(5);}
+
+    p {
+        color: $unactivated-color;
+    }
+
+    &.activated {
+        .wizard-step-icon {
+            background-color: $background-color;
+            border: 1px solid $activated-color;
+            color: $activated-color;
+        }
+
+        p {
+            color: $activated-color;
+        }
+    }
+
+    &.activated:hover {
+        .wizard-step-icon {
+            background-color: $background-color;
+            border: 1px solid $hover-color;
+            color: $hover-color;
+        }
+
+        p {
+            color: $hover-color;
+        }
+    }
+
+    &.active {
+        .wizard-step-icon {
+            width: $icon-em-length;
+            height: $icon-em-length;
+            line-height: $icon-em-length;
+            font-size: $font-em-size;
+            background: $active-color;
+            margin-top: 0;
+        }
+
+        p {
+            color: $active-color;
+            font-weight: bold;
+        }
+    }
+}
+
+.wizard-step-icon {
+	display: inline-block;
+    width: $icon-length;
+    height: $icon-length;
+    line-height: $icon-length;
+    font-size: $font-size;
+    color: $background-color;
+    background-color: $unactivated-color;
+    margin-top: 2px;
+    border-radius: 50%;
+}

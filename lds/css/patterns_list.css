@@ -1,0 +1,16 @@
+body > .container {
+    background-color: white;
+}
+#pattern-list-btn {
+    text-align: right;
+}
+#patterns_list {
+    width: 100%;
+}
+#patterns_list_wrapper {
+    margin-top: 30px;
+}
+#patterns-list-container {
+    min-height: 500px;
+    background-color: white;
+}

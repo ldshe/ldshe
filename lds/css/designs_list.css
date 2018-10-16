@@ -1,0 +1,16 @@
+body > .container {
+    background-color: white;
+}
+#design-list-btn {
+    text-align: right;
+}
+#designs_list {
+    width: 100%;
+}
+#designs_list_wrapper {
+    margin-top: 30px;
+}
+#designs-list-container {
+    min-height: 500px;
+    background-color: white;
+}

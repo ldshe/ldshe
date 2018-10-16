@@ -1,0 +1,37 @@
+$font-color: #999999;
+.http-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    color: $font-color;
+
+    .code {
+        font-size: floor($font-size-base * 8);
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .title {
+        font-size: floor($font-size-base * 2.8);
+        font-weight: bold;
+        margin-bottom: 0.5em;
+    }
+
+    .message{
+        font-size: $font-size-large;
+        text-align: center;
+        width: 60%;
+        margin-bottom: 1em;
+    }
+
+    .link {
+        font-size: $font-size-large;
+        a {
+            font-weight: bold;
+            color: $font-color;
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,233 @@
+@mixin patt-preview() {
+
+    font-size: $font-size-small;
+
+    ul:not(.dropdown-menu), li {
+        display: block;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    li {
+        padding: 2px;
+    }
+
+    .branch-line {
+        border-left: solid 2px $gray-dark;
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: -8px;
+    }
+
+    a.expandable {
+        i {
+            width: $font-size-small;
+            height: $font-size-small;
+            font-size: $font-size-small;
+            margin-left: 5px;
+            margin-bottom: 5px;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+    }
+
+    label {
+        position: relative;
+        display: inline-block;
+        height: $font-size-small;
+        line-height: $font-size-small;
+        vertical-align: middle;
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    label, label::before, label::after {
+        cursor: pointer;
+    }
+
+    label.expandable {
+        padding: 0 0.6em;
+        font-size: 90%;
+        line-height: 18px;
+        max-width: calc(100% - 2em);
+        height: 18px;
+        background-color: $comp-background-color;
+        text-shadow: 1px 1px 1px #444;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &.expanded {
+            border-bottom-left-radius: 0;
+        }
+    }
+
+    label.expandable + span {
+        padding-right: 5px;
+        font-size: 90%;
+        height: 18px;
+        line-height: 18px;
+        vertical-align: middle;
+        display: inline-block;
+        background-color: darken($comp-background-color, 5%);
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        color: #fff;
+        cursor: pointer;
+        &:after {
+            font-family: FontAwesome;
+            content: '\f054';
+            margin-left: 5px;
+        }
+    }
+
+    label.root {
+        background-color: $nav-root-background-color !important;
+    }
+
+    label.root + span {
+        background-color: darken($nav-root-background-color, 5%) !important;
+    }
+
+    label.expandable.expanded + span {
+        &:after {
+            font-family: FontAwesome;
+            content: '\f078';
+            margin-left: 5px;
+        }
+    }
+
+    .composite-wrapper {
+        display: flex;
+        margin-top: 1px;
+    }
+
+    .composite {
+        display: none;
+        width: 100%;
+        padding: 5px;
+        overflow: hidden;
+        border: solid 1px $comp-background-color;
+    }
+
+    .composite.root {
+        border: solid 1px $nav-root-background-color !important;
+    }
+
+    a.expandable + label + ul,
+    a.expandable + label + span + .composite-wrapper + ul, {
+        margin-left: 18px;
+    }
+
+    .node-wrapper {
+        position: relative;
+    }
+
+    a.node {
+        display: inline-block;
+        @include word-wrap();
+        min-width: 100px;
+        max-width: 100%;
+        width: 85%;
+        text-decoration: none;
+    }
+
+    li.branch {
+        font-weight: bold;
+        &:before {
+            position: absolute;
+            margin-left: -15px;
+            font-size: 90%;
+            content: '\251c\2500';
+        }
+        &:last-child {
+            &:before {
+                content: '\2514\2500';
+            }
+            & > .branch-line {
+                height: 12px;
+            }
+        }
+    }
+
+    .current {
+        background-color: rgba(150, 175, 212, 0.3);
+    }
+
+    .composite > ul > li.branch {
+        &:before {
+            content: '';
+        }
+    }
+
+    .composite.expanded {
+        display: block;
+    }
+
+    .selected {
+        outline: 1px dashed $highlight-color;
+    }
+
+    span.activity {
+        display: inline-block;
+        width: 100%;
+        font-size: 90%;
+        color: $item-font-color;
+        text-shadow: 1px 1px 1px #000;
+        white-space: inherit;
+        text-align: left;
+        margin-bottom: -0.2em;
+
+        &.rev {
+            background-color: $rev-background-color;
+        }
+
+        &.ref {
+            background-color: $ref-background-color;
+        }
+
+        &.spa {
+            background-color: $spa-background-color;
+        }
+
+        &.ccv {
+            background-color: $ccv-background-color;
+        }
+
+        &.ctm {
+            background-color: $ctm-background-color;
+        }
+
+        &.ppi {
+            background-color: $ppi-background-color;
+        }
+
+        &.tii {
+            background-color: $tii-background-color;
+        }
+
+        &.eic {
+            background-color: $eic-background-color;
+        }
+
+        &.ie {
+            background-color: $ie-background-color;
+        }
+
+        &.ta {
+            background-color: $ta-background-color;
+        }
+
+        &.pra {
+            background-color: $pra-background-color;
+        }
+
+        &.rii {
+            background-color: $rii-background-color;
+        }
+    }
+}

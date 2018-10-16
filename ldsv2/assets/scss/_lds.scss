@@ -1,0 +1,287 @@
+@import "lds-mixin";
+
+$sticky-footer-height: 50px;
+$background-color: #222;
+$background-inverse-color: #fff;
+$top-navbar-height: 60px;
+$a4-width: 210mm;
+$a4-height: 297mm;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+@charset "utf-8";
+
+@page {
+    size: A4;
+    margin: 10mm;
+}
+
+@media print {
+    .sticky-container {
+        padding: 0 !important;
+    }
+
+    .sticky-footer {
+        display: none !important;
+    }
+
+    .container {
+        width: $a4-width !important;
+        height: $a4-height !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+.container-wrapper {
+    background-color: $background-inverse-color;
+    width: 100%;
+}
+
+.sticky-container {
+    background-color: $background-inverse-color;
+    position: relative;
+    padding-bottom: $sticky-footer-height + 25px;
+    min-height: 100%;
+
+    .sticky-footer {
+        background-color: $background-color;
+        color: $background-inverse-color;
+        width: 100%;
+        height: $sticky-footer-height;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        padding: 5px 0;
+        border-bottom: 20px solid $background-color;
+
+        > .container-fluid {
+            background-color: $background-color;
+        }
+    }
+}
+
+.copyright {
+    font-size: $font-size-small;
+    color: $background-inverse-color;
+}
+
+.textcomplete-dropdown {
+    font-size: $font-size-small;
+    z-index: 1000 !important;
+
+    .textcomplete-item {
+        cursor: pointer;
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+.alertify {
+    z-index: 10000;
+    .dialog {
+        .row.msg {
+            display: flex;
+            padding: 0;
+
+            .icon {
+                display: flex;
+                margin-top: 10px;
+                .fa-exclamation-triangle {
+                    font-size: floor($font-size-base * 3);
+                    &.danger {
+                        color: $brand-danger;
+                    }
+                }
+                .fa-info-circle {
+                    font-size: floor($font-size-base * 3.5);
+                    &.info {
+                        color: $brand-info;
+                    }
+                }
+            }
+
+            .title {
+                margin-bottom: 0;
+            }
+
+            .sub-title {
+                color: $gray-light;
+            }
+        }
+    }
+
+    .dialog >* {
+        text-align: left;
+    }
+}
+
+.alertify-logs {
+    z-index: 10000;
+}
+
+.popover-node {
+    .popover-title,
+    .popover-content {
+        font-size: 85%;
+    }
+}
+
+.lds {
+    position:relative;
+    background-color: $background-inverse-color;
+
+    .btn.btn-default,
+    .btn.btn-success,
+    .btn.btn-info,
+    .btn.btn-warning,
+    .btn.btn-danger,
+    .btn.btn-primary {
+        span.text {
+            margin: 0 5px;
+        }
+    }
+
+    .btn-toolbar.text-center {
+        > .btn-group {
+            float: none;
+        }
+    }
+
+    .control-label-sm {
+        @extend .control-label;
+        font-size: $font-size-small;
+    }
+
+    .pager {
+        .next.next-success > a, .next.next-success > span {
+            @include pager-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+        }
+
+        .next.next-info > a, .next.next-info > span {
+            @include pager-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+        }
+
+        .next.next-warning > a, .next.next-warning  > span {
+            @include pager-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+        }
+
+        .next.next-danger > a, .next.next-danger > span {
+            @include pager-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+        }
+
+        .next.next-primary > a, .next.next-primary > span {
+            @include pager-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+        }
+    }
+
+    @media (max-width: $screen-xs-max) {
+        .pull-right-xs {
+            float: right;
+        }
+    }
+
+    .sticky {
+        position: sticky;
+        top: $top-navbar-height;
+    }
+
+    .table-sm {
+        font-size: $font-size-small;
+    }
+
+    .loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40vh;
+    }
+
+    .scroll-to-top {
+        position: fixed;
+        bottom: 5em;
+        right: 2em;
+        line-height: 2em;
+        vertical-align: middle;
+        text-align: center;
+        display: inline-block;
+        width: 2em;
+        height: 2em;
+        color: #fff;
+        background: #edc883;
+        border-radius: 50%;
+        z-index: 100;
+        cursor: pointer;
+
+        @media (max-width: $screen-xs) {
+            right: 0;
+            bottom: 5em;
+        }
+
+        @media (min-width: $screen-xs-min) {
+            right: 0;
+            bottom: 5em;
+        }
+
+        @media (min-width: $screen-sm-min) {
+            right: calc((100% - 750px) / 2 - 2%);
+            bottom: 5em;
+        }
+
+        @media (min-width: $screen-md-min) {
+            right: calc((100% - 940px) / 2 - 3%);
+            bottom: 5em;
+        }
+
+        @media (min-width: $screen-lg-min) {
+            right: calc((100% - 1170px) / 2 - 2%);
+            bottom: 5em;
+        }
+
+        &:after {
+            content: '\f062';
+            font-family: FontAwesome;
+        }
+    }
+
+    @import "lds-tabbed";
+
+    @import "lds-http-error";
+
+    @import "lds-autosave";
+
+    @import "lds-readonly";
+
+    @import "lds-data-list";
+
+    @import "lds-wizard";
+
+    @import "lds-auto-suggest";
+
+    @import "lds-sortable-list";
+
+    @import "lds-context";
+
+    @import "lds-outcome";
+
+    @import "lds-unit";
+
+    @import "lds-session";
+
+    @import "lds-dashboard";
+
+    @import "lds-printable";
+
+    @import "lds-collection";
+
+    @import "lds-settings";
+
+    @import "lds-notification";
+
+    @import "lds-group";
+}

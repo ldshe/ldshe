@@ -1,0 +1,55 @@
+.lc, .pc {
+    .settings.modal {
+        .share-title {
+            margin-bottom: 10px;
+        }
+
+        .share-group,
+        .share-user {
+            margin: 2px 0;
+            .btn {
+                min-width: 100px;
+            }
+        }
+
+        .share-group.input-group {
+            select.group-select {
+                width: 75%;
+            }
+
+            .selectize-control {
+                position: relative;
+                width: 75%;
+                height: 30px;
+                .selectize-input {
+                    min-height: 30px;
+                    height: 30px;
+                    padding: 5px 10px;
+                    font-size: $font-size-small;
+                    border-radius: 4px 0 0 4px
+                }
+                .selectize-dropdown {
+                    position: absolute;
+                }
+            }
+
+            input[type=text] {
+                width: 75%;
+                z-index: 0;
+            }
+
+            select {
+                width: 25%;
+            }
+        }
+
+        .share-user.input-group {
+            input[type=text] {
+                width: 75%;
+            }
+            select {
+                width: 25%;
+            }
+        }
+    }
+}

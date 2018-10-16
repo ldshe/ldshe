@@ -1,0 +1,178 @@
+.lc {
+    @include data-list-navbar();
+
+    .navbar {
+        margin-top: -3em;
+        border-bottom: 0;
+    }
+
+    .data-list {
+        @include data-list-common();
+
+        @media (max-width: $screen-xs),
+               (min-width: $screen-xs-min) {
+            th.col-title,
+            td.col-title {
+                width: 80px;
+                max-width: 80px;
+            }
+
+            th.col-subject,
+            td.col-subject {
+                width: 80px;
+                max-width: 80px;
+            }
+
+            th.col-teacher,
+            td.col-teacher {
+                width: 75px;
+                max-width: 75px;
+            }
+
+            th.col-class-size,
+            td.col-class-size {
+                width: 40px;
+                max-width: 40px;
+            }
+
+            th.col-sess-num,
+            td.col-sess-num {
+                width: 40px;
+                max-width: 40px;
+            }
+
+            th.col-control,
+            td.col-control {
+                width: 30px;
+                max-width: 30px;
+            }
+
+            th.col-shared-by,
+            td.col-shared-by {
+                width: 80px;
+                max-width: 80px;
+            }
+        }
+
+        @media (min-width: $screen-xs-min) {
+            th.col-control,
+            td.col-control {
+                width: 100px;
+                max-width: 100px;
+            }
+        }
+
+        @media (min-width: $screen-sm-min) {
+            th.col-title,
+            td.col-title {
+                width: 170px;
+                max-width: 170px;
+            }
+
+            th.col-subject,
+            td.col-subject {
+                width: 100px;
+                max-width: 100px;
+            }
+
+            th.col-teacher,
+            td.col-teacher {
+                width: 75px;
+                max-width: 75px;
+            }
+
+            th.col-class-size,
+            td.col-class-size {
+                width: 50px;
+                max-width: 50px;
+            }
+
+            th.col-sess-num,
+            td.col-sess-num {
+                width: 75px;
+                max-width: 75px;
+            }
+
+            th.col-control,
+            td.col-control {
+                width: 80px;
+                max-width: 80px;
+            }
+
+            th.col-shared-by,
+            td.col-shared-by {
+                width: 100px;
+                max-width: 100px;
+            }
+        }
+
+        @media (min-width: $screen-md-min) {
+            th.col-title,
+            td.col-title {
+                width: 395px;
+                max-width: 395px;
+            }
+
+            th.col-subject,
+            td.col-subject {
+                width: 140px;
+                max-width: 140px;
+            }
+
+            th.col-teacher,
+            td.col-teacher {
+                width: 140px;
+                max-width: 140px;
+            }
+
+            th.col-class-size,
+            td.col-class-size {
+                width: 80px;
+                max-width: 80px;
+            }
+
+            th.col-sess-num,
+            td.col-sess-num {
+                width: 80px;
+                max-width: 80px;
+            }
+
+            th.col-control,
+            td.col-control {
+                width: 120px;
+                max-width: 120px;
+            }
+
+            th.col-shared-by,
+            td.col-shared-by {
+                width: 160px;
+                max-width: 160px;
+            }
+        }
+
+        .col-title {
+            position: relative;
+            padding-left: 1.2em;
+        }
+    }
+}
+
+.cs .lc {
+    .time {
+        display: inline-block;
+        height: $input-height-small;
+        line-height: $input-height-small;
+        vertical-align: middle;
+    }
+
+    input[name=sessInDuration],
+    input[name=sessPpDuration] {
+        display: inline-block;
+        max-width: 80px;
+    }
+
+    textarea {
+        min-height: 10em;
+        resize: vertical;
+    }
+}

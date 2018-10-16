@@ -1,0 +1,144 @@
+$background-color: #e56c1d;
+$inverse-background-color: #ffeac4;
+$hover-inverse-background-color: #fff2db;
+$font-color: #d3bf99;
+$hover-font-color: #edc883;
+
+.tabbed {
+    width: 100%;
+    margin: 0.5em 0 0;
+    border-bottom: 1px solid $background-color;
+    overflow: hidden;
+    transition: border 250ms ease;
+}
+.tabbed ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: left;
+    padding-left: 38px;
+}
+.tabbed ul * {
+    margin: 0px;
+    padding: 0px;
+}
+.tabbed ul li {
+    display: inline-block;
+    white-space: nowrap;
+    float: right;
+    padding: 5px 24px 5px;
+    background-color: $inverse-background-color;
+    margin-right: 3em;
+    z-index: 2;
+    position: relative;
+    cursor: pointer;
+    color: $font-color;
+    transition: all 250ms ease;
+    font-weight: bold;
+}
+.tabbed ul li:before,
+.tabbed ul li:after {
+    display: block;
+    content: " ";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 38px;
+    background-color: $inverse-background-color;
+    transition: all 250ms ease;
+}
+.tabbed ul li:before {
+    right: -19px;
+    transform: skew(30deg, 0deg);
+    box-shadow: rgba(0,0,0,.1) 3px 2px 5px, inset rgba(255,255,255,.09) -1px 0;
+}
+.tabbed ul li:after {
+    left: -19px;
+    transform: skew(-30deg, 0deg);
+    box-shadow: rgba(0,0,0,.1) -3px 2px 5px, inset rgba(255,255,255,.09) 1px 0;
+}
+@media (max-width: $screen-sm) {
+    .tabbed ul li {
+        width: 150px;
+        padding: 5px 20px 5px;
+        span {
+            width: 100px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .tabbed ul li:before,
+    .tabbed ul li:after {
+        width: 30px;
+    }
+    .tabbed ul li:before {
+        right: -19px;
+    }
+    .tabbed ul li:after {
+        left: -19px;
+    }
+}
+@media (max-width: $screen-xs) {
+    .tabbed ul {
+        padding-left: 24px;
+    }
+    .tabbed ul li {
+        width: 38px;
+        padding: 5px 5px 5px;
+        text-align: center;
+        margin-right: 18px;
+        span {
+            display: none;
+        }
+    }
+    .tabbed ul li:before,
+    .tabbed ul li:after {
+        width: 18px;
+    }
+    .tabbed ul li:before {
+        right: -9px;
+    }
+    .tabbed ul li:after {
+        left: -9px;
+    }
+}
+.tabbed ul li:hover,
+.tabbed ul li:hover:before,
+.tabbed ul li:hover:after {
+    background-color: $hover-inverse-background-color;
+    color: $hover-font-color;
+}
+.tabbed ul li.active {
+    z-index: 3;
+    cursor: default;
+}
+.tabbed ul li.active,
+.tabbed ul li.active:before,
+.tabbed ul li.active:after {
+    background-color: $background-color;
+    color: $inverse-background-color;
+}
+
+/* Round Tabs */
+.tabbed.round ul li {
+    border-radius: 8px 8px 0 0;
+}
+.tabbed.round ul li:before {
+    border-radius: 0 8px 0 0;
+}
+.tabbed.round ul li:after {
+    border-radius: 8px 0 0 0;
+}
+
+.tabbed-content {
+    border: solid 2px $background-color;
+    margin: 0 0 1.5em;
+    padding: 0.8em;
+}
+
+.tabbed-control {
+    display: inline-block;
+    padding: 2px 0;
+}

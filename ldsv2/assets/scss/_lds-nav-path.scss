@@ -1,0 +1,34 @@
+> .breadcrumb,
+.import.modal .breadcrumb,
+.export.modal .breadcrumb,
+.ud-as.modal .breadcrumb,
+.ug > .breadcrumb {
+    font-size: $font-size-h4;
+    padding: 5px 0;
+    margin-bottom: 10px;
+    background-color: #fff;
+
+    > li + li:before {
+        content: '\f054';
+        font-family: FontAwesome;
+        padding: 0 10px;
+        color: $gray-light;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .active {
+        color: $gray-dark;
+    }
+
+    .sub-title {
+        display: inline-block;
+        small {
+            font-size: 75%;
+            color: $gray-light;
+            margin-left: 10px;
+        }
+    }
+}

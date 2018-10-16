@@ -1,0 +1,63 @@
+.sortable-list {
+    overflow: hidden;
+    
+    thead th,
+    tfoot td {
+        background-color: #e9e9e9;
+    }
+
+    th, td {
+        border: solid 1px #ddd;
+    }
+
+    th.col-seq,
+    td.col-seq {
+        width: 30px;
+        text-align: center;
+        vertical-align:middle;
+    }
+
+    td.col-control {
+        .btn-toolbar {
+            .btn {
+                margin-bottom: 5px;
+                .fa-trash {
+                    color: red;
+                }
+            }
+        }
+    }
+
+    td.empty {
+        width: 100%;
+        text-align: center;
+    }
+
+    tfoot{
+        text-align: right;
+    }
+
+    @media (max-width: $screen-xs) {
+        th.col-control,
+        td.col-control {
+            min-width: 50px;
+            width: 50px;
+        }
+    }
+
+    @media (min-width: $screen-xs-min) {
+        th.col-control,
+        td.col-control {
+            min-width: 50px;
+            width: 50px;
+        }
+    }
+
+    @media (min-width: $screen-sm-min) {
+        th.col-control,
+        td.col-control {
+            min-width: 50px;
+            width: 50px;
+        }
+    }
+}

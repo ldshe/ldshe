@@ -1,0 +1,10 @@
+{
+    "require": {
+        "jenssegers/blade": "^1.1",
+        "vlucas/phpdotenv": "^2.4"
+    },
+
+    "autoload": {
+        "files": ["helpers/helpers.php"]
+    }
+}

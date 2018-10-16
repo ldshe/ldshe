@@ -1,0 +1,3 @@
+# Learning Design Studio (LDSHE)
+
+Learning Design Studio (LDSHE) is a tool to support learning design professionals (including teachers, tutors, and instructional designers) in the design and implementation of fully online and blended courses. LDSHE differs from learning design tools developed to-date in that it is underpinned by a systematic pattern language that (1) can capture the different levels of granularity and complexities in learning design; (2) embeds in the work process design supports based on robust learning theories, and (3) provide users with context-sensitive learning analytics questions in layman terms.

@@ -1,0 +1,74 @@
+{
+  "_from": "jquery-resizable-dom",
+  "_id": "jquery-resizable-dom@0.32.0",
+  "_inBundle": false,
+  "_integrity": "sha512-xohe50mzkN7VZ3YWHZ9B/Ntr/jv/IEK/17CkebRkTtE1yHgqn/0UKPCQ38O15dkWmDnkh/6D7k+o3sJnarbfIg==",
+  "_location": "/jquery-resizable-dom",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "jquery-resizable-dom",
+    "name": "jquery-resizable-dom",
+    "escapedName": "jquery-resizable-dom",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/jquery-resizable-dom/-/jquery-resizable-dom-0.32.0.tgz",
+  "_shasum": "85269fdc604fce3e0b15fe65f2ebb7ca7d4dd247",
+  "_spec": "jquery-resizable-dom",
+  "_where": "/var/www/html/ldshe/ldsv2",
+  "author": {
+    "name": "Rick Strahl, West Wind Technologies"
+  },
+  "bugs": {
+    "url": "https://github.com/RickStrahl/jquery-resizable/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "jquery": "~3.3.1"
+  },
+  "deprecated": false,
+  "description": "A small jquery component to make components resizable",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-copy": "0.0.2",
+    "gulp-filter": "^4.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rimraf": "^0.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.1"
+  },
+  "files": [
+    "readme.md",
+    "dist/",
+    "src/",
+    "assets/"
+  ],
+  "homepage": "https://github.com/RickStrahl/jquery-resizable",
+  "keywords": [
+    "resizable",
+    "jquery-resizable",
+    "panel",
+    "jquery",
+    "jquery-plugin",
+    "ecosystem:jquery"
+  ],
+  "license": "MIT",
+  "main": "./dist/jquery-resizable.min.js",
+  "name": "jquery-resizable-dom",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RickStrahl/jquery-resizable.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.32.0"
+}
