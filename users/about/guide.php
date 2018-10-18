@@ -8,19 +8,44 @@
     <div class="container">
         <div class="well">
             <h3 class="page-header">User guide</h3>
-            <h4>Video Guide: How to design a course in <b>LDS<sup>HE</sup></b></h4>
+            <h4><b>0.</b> Introduction to Learning Design Studio HE</h4>
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/TfCtEW4UIQI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/rYtVMzMYjUg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
             <br/>
-            <h4>Video Guide: How to share a course design</h4>
+            <h4><b>1.</b> Course Level</h4>
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/aSgXSa0XmYM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/QgML-hPwXaU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
             <br/>
-            <h4>Video Guide: How to share and reuse patterns</h4>
+            <h4><b>2.</b> Strategic Components and Tasks</h4>
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/GnMaXxpsW6o?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/M32DDW99oL8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <br/>
+            <h4><b>3.</b> Create Patterns</h4>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/C7JZyS7eWrs?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <br/>
+            <h4><b>4.</b> Shared Patterns</h4>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/L4Y_1FGPttg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <br/>
+            <h4><b>5.</b> Session Organization</h4>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/B5A0-dLFaoY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <br/>
+            <h4><b>6.</b> Designer's Dashboard</h4>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/f267azZjeMU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <br/>
+            <h4><b>7.</b> Printable Version</h4>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7XXK4KYOEQU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
         </div>
     </div>
